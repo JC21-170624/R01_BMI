@@ -20,17 +20,25 @@ namespace R01_BMI
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            String h = hei.Text;
+            String w = wei.Text;
+            float height;
+            float weight;
+
             if (hei.Text != null && wei.Text != null)
             {
+                if (float.TryParse(h, out height) != false && float.TryParse(w, out weight) != false)
+                {
 
-                float height = float.Parse(hei.Text);
-                float weight = float.Parse(wei.Text);
+                    float result = (weight / (height * height)) * 10000;
+                    double answer = Math.Round(result);
 
-                float result = (weight / (height * height)) * 10000;
-                double answer = Math.Round(result);
-
-                res.Text = "あなたのBMIは" + answer + "です";
-
+                    res.Text = "あなたのBMIは" + answer + "です";
+                }
+                else
+                {
+                    res.Text = "身長と体重には数字を入力してください";
+                }
             }
             else
             {
