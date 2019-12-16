@@ -25,7 +25,7 @@ namespace R01_BMI
             float height;
             float weight;
 
-            if (h.Length != 0 && w.Length != 0)
+            if (h != null && w != null)
             {
                 if (float.TryParse(h, out height) != false && float.TryParse(w, out weight) != false)
                 {
