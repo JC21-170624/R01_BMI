@@ -24,8 +24,9 @@ namespace R01_BMI
             float weight = float.Parse(wei.Text);
 
             float result = (weight / (height * height)) * 10000;
+            double answer = Math.Round(result);
 
-            res.Text = "あなたのBMIは" + result + "です";
+            res.Text = "あなたのBMIは" + answer + "です";
         }
     }
 }
