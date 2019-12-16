@@ -14,11 +14,11 @@
         <StackLayout HorizontalOptions="CenterAndExpand"
                      VerticalOptions="CenterAndExpand">
             <Label Text="身長を入力(cm)" />
-            <Entry MaxLength="3" Placeholder="身長を入力" />
+            <Entry MaxLength="3" Placeholder="身長を入力" x:Name="hei"/>
             <Label Text="体重を入力(kg)" />
-            <Entry MaxLength="2" Placeholder="体重を入力" />
-            <Button Text="BMIを計算する" />
-            <Label Text="ボタンを押すとBMIを計算します" />
+            <Entry MaxLength="2" Placeholder="体重を入力" x:Name="wei"/>
+            <Button Text="BMIを計算する" Clicked="Button_Clicked"/>
+            <Label Text="ボタンを押すとBMIを計算します" x:Name="res"/>
 
         </StackLayout>
     </StackLayout>

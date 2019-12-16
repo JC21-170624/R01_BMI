@@ -17,5 +17,15 @@ namespace R01_BMI
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            float height = float.Parse(hei.Text);
+            float weight = float.Parse(wei.Text);
+
+            float result = (weight / (height * height)) * 10000;
+
+            res.Text = "あなたのBMIは" + result + "です";
+        }
     }
 }
