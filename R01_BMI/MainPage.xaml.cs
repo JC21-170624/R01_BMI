@@ -24,8 +24,26 @@ namespace R01_BMI
             String w = wei.Text;
             float height;
             float weight;
+            float result;
+            double answer;
 
-            if (h != null && w != null)
+            if (h == null || w == null)
+            {
+                res.Text = "身長と体重を入力してください";
+            }
+            else if(float.TryParse(h, out height) == false || float.TryParse(w, out weight) == false)
+            {
+                res.Text = "身長と体重には数字を入力してください";
+            }
+            else
+            {
+                result = (weight / (height * height)) * 10000;
+                answer = Math.Round(result);
+
+                res.Text = "あなたのBMIは" + answer + "です";
+            }
+
+            /*if (h != null && w != null)
             {
                 if (float.TryParse(h, out height) != false && float.TryParse(w, out weight) != false)
                 {
@@ -43,7 +61,7 @@ namespace R01_BMI
             else
             {
                 res.Text = "身長と体重を入力してください";
-            }
+            }*/
         }
     }
 }
