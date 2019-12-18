@@ -27,13 +27,9 @@ namespace R01_BMI
             float result;
             double answer;
 
-            if (hei.Text == null || wei.Text == null)
+            if(float.TryParse(h, out height) == false || float.TryParse(w, out weight) == false || hei.Text == null || wei.Text == null)
             {
-                res.Text = "身長と体重を入力してください";
-            }
-            else if(float.TryParse(h, out height) == false || float.TryParse(w, out weight) == false)
-            {
-                res.Text = "身長と体重には数字を入力してください";
+                res.Text = "身長と体重に数字を入力してください";
             }
             else
             {
