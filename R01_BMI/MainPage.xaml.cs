@@ -27,7 +27,7 @@ namespace R01_BMI
             float result;
             double answer;
 
-            if (h == null || w == null)
+            if (hei.Text == null || wei.Text == null)
             {
                 res.Text = "身長と体重を入力してください";
             }
